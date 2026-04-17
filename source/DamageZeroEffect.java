@@ -5,7 +5,7 @@
  */
 public class DamageZeroEffect implements StatusEffect {
     private int duration;
-    private static final String EFFECT_NAME = "DamageNullifier";
+    private static final String EFFECT_NAME = "DamageZeroEffect";
     
     public DamageZeroEffect() {
         // Initialize duration to 2 (current turn + next turn)
@@ -21,7 +21,7 @@ public class DamageZeroEffect implements StatusEffect {
     @Override
     public void decrementDuration() {
         // Check if duration is greater than 0
-        if (this.duration >= 0)
+        if (this.duration > 0)
         {
             // If so, decrement duration by 1
             duration--;
